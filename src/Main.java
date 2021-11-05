@@ -12,7 +12,7 @@ public class Main {
         int number2 = sc.nextInt();
 
         if (number == 1){
-            NewYorkCoffeeShop c1 = new NewYorkCoffeeShop();
+            NewYorkCoffeeShop c1 = new NewYorkCoffeeShop("New York");
             if (number2 == 1){
                 c1.waitCoffee();
                 c1.makeLatte();
@@ -26,7 +26,7 @@ public class Main {
                 System.out.println("Check your number, please.");
             }
         } else if (number == 2){
-            MoscowCoffeeShop c1 = new MoscowCoffeeShop();
+            MoscowCoffeeShop c1 = new MoscowCoffeeShop("Moscow");
             if (number2 == 1){
                 c1.waitCoffee();
                 c1.makeLatte();
@@ -40,7 +40,7 @@ public class Main {
                 System.out.println("Check your number, please.");
             }
         } else if (number == 3){
-            MinskCoffeeShop c1 = new MinskCoffeeShop();
+            MinskCoffeeShop c1 = new MinskCoffeeShop("Minsk");
             if (number2 == 1){
                 c1.waitCoffee();
                 c1.makeLatte();
@@ -59,47 +59,44 @@ public class Main {
     }
 }
 
-class NewYorkCoffeeShop {
+class CoffeeHouse {
+    String city;
+
+    public CoffeeHouse(String city){
+        this.city = city;
+    }
+
     public void makeLatte(){
-        System.out.println("Thanks for order in New York, take your Latte. Bye!");
+        System.out.printf("Thanks for order in %s, take your Latte. Bye!", city);
     }
+
     public void makeCappuccino(){
-        System.out.println("Thanks for order in New York, take your Cappuccino. Bye!");
+        System.out.printf("Thanks for order in %s, take your Cappuccino. Bye!", city);
     }
+
     public void makeRaf(){
-        System.out.println("Thanks for order in New York, take your Raf. Bye!");
+        System.out.printf("Thanks for order in %s, take your Raf. Bye!", city);
     }
     public void waitCoffee(){
         System.out.println("Please, wait a minute.");
+    }
+
+}
+
+class NewYorkCoffeeShop extends CoffeeHouse{
+    public NewYorkCoffeeShop(String city){
+        super(city);
     }
 }
 
-class MoscowCoffeeShop {
-    public void makeLatte(){
-        System.out.println("Thanks for order in Moscow, take your Latte. Bye!");
-    }
-    public void makeCappuccino(){
-        System.out.println("Thanks for order in Moscow, take your Cappuccino. Bye!");
-    }
-    public void makeRaf(){
-        System.out.println("Thanks for order in Moscow, take your Raf. Bye!");
-    }
-    public void waitCoffee(){
-        System.out.println("Please, wait a minute.");
+class MoscowCoffeeShop extends CoffeeHouse{
+    public MoscowCoffeeShop(String city){
+        super(city);
     }
 }
 
-class MinskCoffeeShop {
-    public void makeLatte(){
-        System.out.println("Thanks for order in Minsk, take your Latte. Bye!");
-    }
-    public void makeCappuccino(){
-        System.out.println("Thanks for order in Minsk, take your Cappuccino. Bye!");
-    }
-    public void makeRaf(){
-        System.out.println("Thanks for order in Minsk, take your Raf. Bye!");
-    }
-    public void waitCoffee(){
-        System.out.println("Please, wait a minute.");
+class MinskCoffeeShop extends CoffeeHouse{
+    public MinskCoffeeShop(String city){
+        super(city);
     }
 }
