@@ -14,10 +14,13 @@ public class Main {
         if (number == 1){
             NewYorkCoffeeShop c1 = new NewYorkCoffeeShop();
             if (number2 == 1){
+                c1.waitCoffee();
                 c1.makeLatte();
             } else if (number2 == 2){
+                c1.waitCoffee();
                 c1.makeCappuccino();
             } else if (number2 == 3){
+                c1.waitCoffee();
                 c1.makeRaf();
             } else {
                 System.out.println("Check your number, please.");
@@ -25,10 +28,13 @@ public class Main {
         } else if (number == 2){
             MoscowCoffeeShop c1 = new MoscowCoffeeShop();
             if (number2 == 1){
+                c1.waitCoffee();
                 c1.makeLatte();
             } else if (number2 == 2){
+                c1.waitCoffee();
                 c1.makeCappuccino();
             } else if (number2 == 3){
+                c1.waitCoffee();
                 c1.makeRaf();
             } else {
                 System.out.println("Check your number, please.");
@@ -36,10 +42,13 @@ public class Main {
         } else if (number == 3){
             MinskCoffeeShop c1 = new MinskCoffeeShop();
             if (number2 == 1){
+                c1.waitCoffee();
                 c1.makeLatte();
             } else if (number2 == 2){
+                c1.waitCoffee();
                 c1.makeCappuccino();
             } else if (number2 == 3){
+                c1.waitCoffee();
                 c1.makeRaf();
             } else {
                 System.out.println("Check your number, please.");
@@ -60,6 +69,9 @@ class NewYorkCoffeeShop {
     public void makeRaf(){
         System.out.println("Thanks for order in New York, take your Raf. Bye!");
     }
+    public void waitCoffee(){
+        System.out.println("Please, wait a minute.");
+    }
 }
 
 class MoscowCoffeeShop {
@@ -72,6 +84,9 @@ class MoscowCoffeeShop {
     public void makeRaf(){
         System.out.println("Thanks for order in Moscow, take your Raf. Bye!");
     }
+    public void waitCoffee(){
+        System.out.println("Please, wait a minute.");
+    }
 }
 
 class MinskCoffeeShop {
@@ -83,5 +98,8 @@ class MinskCoffeeShop {
     }
     public void makeRaf(){
         System.out.println("Thanks for order in Minsk, take your Raf. Bye!");
+    }
+    public void waitCoffee(){
+        System.out.println("Please, wait a minute.");
     }
 }
