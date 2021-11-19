@@ -1,12 +1,23 @@
-public interface CoffeeHouse {
+public abstract class CoffeeHouse {
+    int latteCounter;
+    int cappuccinoCounter;
+    int rafCounter;
+    double proceeds;
 
-        void makeLatte();
+    double lattePrice = 3.5;
+    double cappuccinoPrice = 4.5;
+    double rafPrice = 5.5;
 
-        void makeCappuccino();
 
-        void makeRaf();
+    public void Statistics(){}
 
-        default void waitCoffee(){
+    public void makeLatte() {}
+
+    public void makeCappuccino() {}
+
+    public void makeRaf() {}
+
+    public void waitCoffee(){
             System.out.println("Wait a minute, please.");
-        };
-    }
+        }
+}
